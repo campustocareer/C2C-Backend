@@ -1,0 +1,15 @@
+# dependencies
+node_modules/
+package-lock.json
+
+# dotenv environment variables
+.env
+
+# logs
+logs
+*.log
+npm-debug.log*
+
+# OS generated
+.DS_Store
+Thumbs.db
