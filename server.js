@@ -7,12 +7,12 @@ require("dotenv").config();
 const authRoutes = require("./routes/auth");
 
 const app = express(); // ✅ Define app before using it
-const corsOptions = {
-  origin: "http://localhost:3000", // Allow requests from your React app
-  methods: "GET, POST, PUT, DELETE",
+
+
+app.use(cors({
+  origin: ['http://localhost:3000', 'http://192.168.1.3:5173'], // add your local IP and frontend URLs
   credentials: true
-};
-app.use(cors(corsOptions));
+}));
 
 
 app.use(cors()); // ✅ Use CORS after app is defined
